@@ -80,7 +80,7 @@ export default function PrinterSupportOptions() {
 
             {/* Enhanced Card Body */}
             <div className="w-full bg-white rounded-2xl shadow-xl pt-36 pb-8 px-6 flex justify-center items-center text-center group-hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 group-hover:border-[#59c7b5] min-h-[200px] hover:bg-gradient-to-br hover:from-white hover:to-[#f0fdfa]">
-              <span className="text-gray-800 text-xl font-bold leading-tight group-hover:text-gray-900 transition-colors duration-300 group-hover:font-extrabold">
+              <span className="text-[#007DBD] text-xl font-bold leading-tight group-hover:text-gray-900 transition-colors duration-300 group-hover:font-extrabold">
                 {option.label}
               </span>
             </div>

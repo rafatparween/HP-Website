@@ -45,7 +45,10 @@ export default function Navbar() {
 
         <FaShoppingCart className="text-gray-700 text-xl hover:text-blue-600 cursor-pointer transition-colors duration-200" />
 
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2 font-semibold rounded-full transition-colors duration-200 shadow-md">
+        <button className="hover:scale-105 px-8 py-2 font-semibold rounded-full transition-colors duration-200 shadow-md"
+  style={{ 
+    background: 'linear-gradient(to right, #59c7b5, #59c7b5, #0095d4)' 
+  }}>
           Sign in
         </button>
       </div>
@@ -84,7 +87,7 @@ export default function Navbar() {
 
           <FaShoppingCart className="text-gray-700 text-2xl hover:text-blue-600 cursor-pointer transition-colors duration-200" />
 
-          <button className=" hover:bg-blue-700 text-white px-8 py-2 font-semibold rounded-full transition-colors duration-200 shadow-md">
+          <button className="bg-gradient-to-r from-[#59c7b5] via-[#59c7b5] to-[#0095d4] bg-clip-text text-transparent hover:bg-blue-700 text-white px-8 py-2 font-semibold rounded-full transition-colors duration-200 shadow-md">
             Sign in
           </button>
         </div>
