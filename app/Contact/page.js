@@ -62,7 +62,7 @@ const Contact = () => {
             Contact <span className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] bg-clip-text text-transparent">Us</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            We'd love to hear from you! Please fill out the form below and we will get in touch with you shortly.
+            We love to hear from you! Please fill out the form below and we will get in touch with you shortly.
           </p>
         </div>
 
@@ -241,7 +241,7 @@ const Contact = () => {
                     <CheckCircle className="text-green-500 text-2xl mr-4 flex-shrink-0" />
                     <div>
                       <h3 className="font-bold text-lg">Message Sent Successfully!</h3>
-                      <p className="text-green-600">Your response has been submitted! We'll get back to you shortly.</p>
+                      <p className="text-green-600">Your response has been submitted! We will get back to you shortly.</p>
                     </div>
                   </div>
                 )}

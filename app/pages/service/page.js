@@ -296,7 +296,7 @@ const Services = () => {
                     <div className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] p-5 rounded-3xl mr-6 shadow-lg">
                       <SupportAgent className="text-white text-4xl" />
                     </div>
-                    <h2 className="text-4xl font-bold text-gray-900">We're Here to Help</h2>
+                    <h2 className="text-4xl font-bold text-gray-900">We are Here to Help</h2>
                   </div>
                   <p className="text-xl text-gray-600 mb-12 leading-relaxed">
                     Get expert support during business hours. Connect with us online or by phone for immediate assistance!

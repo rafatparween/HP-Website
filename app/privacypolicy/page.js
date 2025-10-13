@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head'; // <-- import Head from next/head
 import { 
   Security, 
   Policy, 
@@ -23,157 +22,148 @@ import {
 
 const PrivacyPolicy = () => {
   return (
-    <>
-      <Head>
-        <title>Privacy Policy - EzTech Printer Solutions</title>
-        <meta name="description" content="Learn how EzTech Printer Solutions collects, uses, and protects your personal information." />
-        {/* Google Ads Meta */}
-        <meta name="google-site-verification" content="YOUR_GOOGLE_ADS_VERIFICATION_CODE_HERE" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 py-16">
-        {/* Header Section */}
-        <div className="max-w-[1360px] mx-auto px-6 lg:px-8 mb-16">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-gradient-to-r from-[#59c7b5] to-[#0095d4] text-white px-6 py-3 rounded-full mb-6">
-              <Security className="mr-2" />
-              <span className="font-semibold">Privacy & Data Protection</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6">
-              Privacy <span className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] bg-clip-text text-transparent">Policy</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Learn how we collect, use, and protect your personal information
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 py-16">
+      {/* Header Section */}
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 mb-16">
+        <div className="text-center">
+          <div className="inline-flex items-center bg-gradient-to-r from-[#59c7b5] to-[#0095d4] text-white px-6 py-3 rounded-full mb-6">
+            <Security className="mr-2" />
+            <span className="font-semibold">Privacy & Data Protection</span>
           </div>
+          <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6">
+            Privacy <span className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] bg-clip-text text-transparent">Policy</span>
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Learn how we collect, use, and protect your personal information
+          </p>
         </div>
+      </div>
 
-        {/* Main Content */}
-        <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Sidebar Navigation */}
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-3xl shadow-2xl p-6 sticky top-8 border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center">
-                  <Policy className="text-[#59c7b5] mr-3" />
-                  Policy Sections
-                </h3>
-                <nav className="space-y-2">
-                  {privacyPolicyContent.map((section, index) => (
-                    <a 
-                      key={index}
-                      href={`#section-${index}`}
-                      className="block text-gray-600 hover:text-[#0095d4] font-medium py-3 px-4 rounded-xl hover:bg-[#59c7b5]/10 transition-all duration-300 group"
-                    >
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-[#59c7b5] rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
-                        <span className="text-sm leading-tight">{section.sectionTitle}</span>
-                      </div>
-                    </a>
-                  ))}
-                </nav>
-                
-                {/* Quick Info */}
-                <div className="mt-8 p-4 bg-gradient-to-r from-[#59c7b5]/10 to-[#0095d4]/10 rounded-2xl border border-[#59c7b5]/20">
-                  <div className="flex items-center text-sm text-gray-700 mb-2">
-                    <Update className="text-[#59c7b5] mr-2 text-base" />
-                    <span className="font-semibold">Last Updated</span>
-                  </div>
-                  <p className="text-xs text-gray-600">January 2024</p>
+      {/* Main Content */}
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Sidebar Navigation */}
+          <div className="lg:col-span-1">
+            <div className="bg-white rounded-3xl shadow-2xl p-6 sticky top-8 border border-gray-100">
+              <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center">
+                <Policy className="text-[#59c7b5] mr-3" />
+                Policy Sections
+              </h3>
+              <nav className="space-y-2">
+                {privacyPolicyContent.map((section, index) => (
+                  <a 
+                    key={index}
+                    href={`#section-${index}`}
+                    className="block text-gray-600 hover:text-[#0095d4] font-medium py-3 px-4 rounded-xl hover:bg-[#59c7b5]/10 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-[#59c7b5] rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
+                      <span className="text-sm leading-tight">{section.sectionTitle}</span>
+                    </div>
+                  </a>
+                ))}
+              </nav>
+              
+              {/* Quick Info */}
+              <div className="mt-8 p-4 bg-gradient-to-r from-[#59c7b5]/10 to-[#0095d4]/10 rounded-2xl border border-[#59c7b5]/20">
+                <div className="flex items-center text-sm text-gray-700 mb-2">
+                  <Update className="text-[#59c7b5] mr-2 text-base" />
+                  <span className="font-semibold">Last Updated</span>
                 </div>
+                <p className="text-xs text-gray-600">January 2024</p>
               </div>
             </div>
+          </div>
 
-            {/* Policy Content */}
-            <div className="lg:col-span-3">
-              <div className="space-y-8">
-                {privacyPolicyContent.map((section, index) => (
-                  <section 
-                    key={index}
-                    id={`section-${index}`}
-                    className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100 transform hover:shadow-3xl transition-all duration-500 group"
-                  >
-                    {/* Section Header */}
-                    <div className="flex items-start mb-8">
-                      <div className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] p-4 rounded-2xl mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        {getSectionIcon(section.sectionTitle)}
-                      </div>
-                      <div className="flex-1">
-                        <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-                          {section.sectionTitle}
-                        </h2>
-                        <div className="w-20 h-1 bg-gradient-to-r from-[#59c7b5] to-[#0095d4] rounded-full"></div>
-                      </div>
+          {/* Policy Content */}
+          <div className="lg:col-span-3">
+            <div className="space-y-8">
+              {privacyPolicyContent.map((section, index) => (
+                <section 
+                  key={index}
+                  id={`section-${index}`}
+                  className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100 transform hover:shadow-3xl transition-all duration-500 group"
+                >
+                  {/* Section Header */}
+                  <div className="flex items-start mb-8">
+                    <div className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] p-4 rounded-2xl mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      {getSectionIcon(section.sectionTitle)}
                     </div>
-
-                    {/* Main Content */}
-                    <div className="space-y-6">
-                      {section.content && section.content.map((paragraph, idx) => (
-                        <div key={idx} className="flex items-start group/p">
-                          <div className="bg-[#59c7b5]/10 w-6 h-6 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0 group-hover/p:scale-110 transition-transform duration-300">
-                            <div className="w-2 h-2 bg-[#59c7b5] rounded-full"></div>
-                          </div>
-                          <p className="text-gray-700 text-lg leading-8 group-hover/p:text-gray-900 transition-colors duration-300 flex-1">
-                            {paragraph}
-                          </p>
-                        </div>
-                      ))}
-
-                      {/* Sub Sections */}
-                      {section.subSections && section.subSections.map((subSection, subIdx) => (
-                        <div key={subIdx} className="ml-6 mt-6 p-6 bg-gray-50 rounded-2xl border-l-4 border-[#0095d4] group/s">
-                          <div className="flex items-start mb-4">
-                            <div className="bg-[#0095d4] w-3 h-3 rounded-full mt-2 mr-4 flex-shrink-0 group-hover/s:scale-150 transition-transform duration-300"></div>
-                            <h3 className="text-xl font-bold text-gray-800 flex-1">
-                              {subSection.subTitle}
-                            </h3>
-                          </div>
-                          
-                          {Array.isArray(subSection.content) ? (
-                            <div className="space-y-3 ml-7">
-                              {subSection.content.map((subParagraph, subPIdx) => (
-                                <div key={subPIdx} className="flex items-start">
-                                  <div className="bg-[#0095d4]/20 w-2 h-2 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                                  <p className="text-gray-700 leading-7 flex-1">
-                                    {subParagraph}
-                                  </p>
-                                </div>
-                              ))}
-                            </div>
-                          ) : (
-                            <p className="text-gray-700 leading-7 ml-7">
-                              {subSection.content}
-                            </p>
-                          )}
-                        </div>
-                      ))}
+                    <div className="flex-1">
+                      <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
+                        {section.sectionTitle}
+                      </h2>
+                      <div className="w-20 h-1 bg-gradient-to-r from-[#59c7b5] to-[#0095d4] rounded-full"></div>
                     </div>
-                  </section>
-                ))}
-              </div>
-
-              {/* Contact Section */}
-              <div className="mt-12 bg-gradient-to-r from-[#59c7b5] to-[#0095d4] rounded-3xl p-12 text-white shadow-2xl">
-                <div className="flex flex-col lg:flex-row items-center gap-8">
-                  <div className="flex-1">
-                    <ContactSupport className="text-6xl mb-6 opacity-90" />
-                    <h3 className="text-3xl font-bold mb-4">Questions About Our Privacy Policy?</h3>
-                    <p className="text-xl opacity-90 mb-6">
-                      We&apos;re here to help you understand how we protect your data and privacy.
-                    </p>
                   </div>
-                  <div className="flex-1">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                      <h4 className="text-xl font-bold mb-4">Contact Our Privacy Team</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-center">
-                          <Email className="mr-3 text-[#59c7b5]" />
-                          <span>support@eztechprintersolutions.com</span>
+
+                  {/* Main Content */}
+                  <div className="space-y-6">
+                    {section.content && section.content.map((paragraph, idx) => (
+                      <div key={idx} className="flex items-start group/p">
+                        <div className="bg-[#59c7b5]/10 w-6 h-6 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0 group-hover/p:scale-110 transition-transform duration-300">
+                          <div className="w-2 h-2 bg-[#59c7b5] rounded-full"></div>
                         </div>
-                        <div className="flex items-center">
-                          <Business className="mr-3 text-[#59c7b5]" />
-                          <span>123 Tech Center, Ohio, United States</span>
+                        <p className="text-gray-700 text-lg leading-8 group-hover/p:text-gray-900 transition-colors duration-300 flex-1">
+                          {paragraph}
+                        </p>
+                      </div>
+                    ))}
+
+                    {/* Sub Sections */}
+                    {section.subSections && section.subSections.map((subSection, subIdx) => (
+                      <div key={subIdx} className="ml-6 mt-6 p-6 bg-gray-50 rounded-2xl border-l-4 border-[#0095d4] group/s">
+                        <div className="flex items-start mb-4">
+                          <div className="bg-[#0095d4] w-3 h-3 rounded-full mt-2 mr-4 flex-shrink-0 group-hover/s:scale-150 transition-transform duration-300"></div>
+                          <h3 className="text-xl font-bold text-gray-800 flex-1">
+                            {subSection.subTitle}
+                          </h3>
                         </div>
+                        
+                        {Array.isArray(subSection.content) ? (
+                          <div className="space-y-3 ml-7">
+                            {subSection.content.map((subParagraph, subPIdx) => (
+                              <div key={subPIdx} className="flex items-start">
+                                <div className="bg-[#0095d4]/20 w-2 h-2 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                                <p className="text-gray-700 leading-7 flex-1">
+                                  {subParagraph}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-gray-700 leading-7 ml-7">
+                            {subSection.content}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+
+            {/* Contact Section */}
+            <div className="mt-12 bg-gradient-to-r from-[#59c7b5] to-[#0095d4] rounded-3xl p-12 text-white shadow-2xl">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <ContactSupport className="text-6xl mb-6 opacity-90" />
+                  <h3 className="text-3xl font-bold mb-4">Questions About Our Privacy Policy?</h3>
+                  <p className="text-xl opacity-90 mb-6">
+                    We're here to help you understand how we protect your data and privacy.
+                  </p>
+                </div>
+                <div className="flex-1">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <h4 className="text-xl font-bold mb-4">Contact Our Privacy Team</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-center">
+                        <Email className="mr-3 text-[#59c7b5]" />
+                        <span>support@eztechprintersolutions.com</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Business className="mr-3 text-[#59c7b5]" />
+                        <span>123 Tech Center, Ohio, United States</span>
                       </div>
                     </div>
                   </div>
@@ -183,14 +173,33 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-
+// Helper function to get appropriate icons for each section
+const getSectionIcon = (sectionTitle) => {
+  const icons = {
+    'Privacy Policy': <Security className="text-white text-2xl" />,
+    'Interpretation and Definitions': <Description className="text-white text-2xl" />,
+    'Collecting and Using Your Personal Data': <DataUsage className="text-white text-2xl" />,
+    'Tracking Technologies and Cookies': <Cookie className="text-white text-2xl" />,
+    'Use of Your Personal Data': <Analytics className="text-white text-2xl" />,
+    'Retention of Your Personal Data': <Storage className="text-white text-2xl" />,
+    'Transfer of Your Personal Data': <TransferWithinAStation className="text-white text-2xl" />,
+    'Delete Your Personal Data': <Delete className="text-white text-2xl" />,
+    'Disclosure of Your Personal Data': <Share className="text-white text-2xl" />,
+    'Security of Your Personal Data': <Security className="text-white text-2xl" />,
+    'Children’s Privacy': <ChildCare className="text-white text-2xl" />,
+    'Links to Other Websites': <Link className="text-white text-2xl" />,
+    'Changes to this Privacy Policy': <Update className="text-white text-2xl" />,
+    'Contact Us': <ContactSupport className="text-white text-2xl" />
+  };
+  
+  return icons[sectionTitle] || <Policy className="text-white text-2xl" />;
+};
 
 export default PrivacyPolicy;
-
 
 const privacyPolicyContent = [
   {
