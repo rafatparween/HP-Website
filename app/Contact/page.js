@@ -266,7 +266,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Email Support</h3>
               <p className="text-gray-600 mb-4">Send us an email for detailed inquiries</p>
-              <p className="text-lg font-bold text-[#59c7b5]">support@eztechprintersolutions.com</p>
+              <p className="text-lg font-bold text-[#59c7b5]">support@example.com</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">

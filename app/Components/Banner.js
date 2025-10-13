@@ -76,7 +76,7 @@
 
 //           <div className="space-y-3 mb-6">
 //             {[
-//               'Live Chat with Experts',
+//               &apos;Live Chat with Experts',
 //               'Quick Problem Diagnosis', 
 //               'Step-by-Step Solutions'
 //             ].map((item, index) => (
@@ -175,7 +175,7 @@
 //                   onClick={() => setCurrent(index)}
 //                   className={`rounded-full transition-all duration-500 ${
 //                     index === current 
-//                       ? 'w-8 h-2 shadow-lg'
+//                       ? &apos;w-8 h-2 shadow-lg'
 //                       : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
 //                   }`}
 //                   style={{
@@ -255,7 +255,7 @@ export default function Banner() {
           </h1>
 
           <p className="text-base md:text-lg text-gray-800 mb-4 leading-relaxed font-medium">
-           In this Assistance hub, you'll find quick access to live assistance for common computer and printer issues.
+           In this Assistance hub, you&apos;ll find quick access to live assistance for common computer and printer issues.
           </p>
 
           {/* HORIZONTAL LINE */}
@@ -334,18 +334,18 @@ export default function Banner() {
             </div>
 
             {/* INDICATORS */}
-            <div className="flex justify-center mt-6 gap-2">
-              {sliderImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrent(index)}
-                  className={`rounded-full transition-all duration-500 ${
-                    index === current ? 'w-8 h-2 shadow-lg' : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  style={{ backgroundColor: index === current ? '#0095d4' : '' }}
-                />
-              ))}
-            </div>
+           <div className="flex justify-center mt-6 gap-2">
+  {sliderImages.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setCurrent(index)}
+      className={`rounded-full transition-all duration-500 ${
+        index === current ? "w-8 h-2 shadow-lg" : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
+      }`}
+      style={{ backgroundColor: index === current ? "#0095d4" : "" }}
+    />
+  ))}
+</div>
           </div>
         </div>
       </div>
