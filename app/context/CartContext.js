@@ -123,76 +123,56 @@
 
 
 "use client";
-
-import React, { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false); // popup toggle
 
-  // Load cart from localStorage on mount
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem("cart");
-      if (saved) setCart(JSON.parse(saved));
-    } catch (e) {
-      console.error("Failed to parse cart from localStorage", e);
-    } finally {
-      setIsLoaded(true);
-    }
-  }, []);
-
-  // Persist cart to localStorage
-  useEffect(() => {
-    if (!isLoaded) return;
-    try {
-      localStorage.setItem("cart", JSON.stringify(cart));
-    } catch (e) {
-      console.error("Failed to save cart to localStorage", e);
-    }
-  }, [cart, isLoaded]);
-
-  const addToCart = (product) => {
+  const addToCart = (item) => {
     setCart((prev) => {
-      const found = prev.find((p) => p.id === product.id);
-      if (found) {
-        return prev.map((p) =>
-          p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
+      const exist = prev.find((i) => i.id === item.id);
+      if (exist) {
+        return prev.map((i) =>
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
         );
+      } else {
+        return [...prev, { ...item, quantity: 1 }];
       }
-      return [...prev, { ...product, quantity: 1, addedAt: Date.now() }];
     });
   };
 
   const removeFromCart = (id) => {
-    setCart((prev) => prev.filter((p) => p.id !== id));
+    setCart((prev) => prev.filter((i) => i.id !== id));
   };
 
-  const updateQuantity = (id, newQty) => {
-    if (newQty < 1) {
-      removeFromCart(id);
-      return;
-    }
-    setCart((prev) => prev.map((p) => (p.id === id ? { ...p, quantity: newQty } : p)));
+  const updateQuantity = (id, quantity) => {
+    if (quantity <= 0) return removeFromCart(id);
+    setCart((prev) =>
+      prev.map((i) => (i.id === id ? { ...i, quantity } : i))
+    );
   };
 
-  const getTotalItems = () => cart.reduce((s, item) => s + (item.quantity || 0), 0);
+  const getTotalItems = () => cart.reduce((sum, i) => sum + i.quantity, 0);
 
   const getTotalPrice = () =>
-    cart.reduce((s, item) => s + (item.discountPrice || item.price || 0) * (item.quantity || 0), 0);
+    cart.reduce((sum, i) => sum + i.quantity * i.price, 0);
+
+  const toggleCart = () => setIsCartOpen(!isCartOpen);
 
   return (
     <CartContext.Provider
       value={{
         cart,
-        isLoaded,
         addToCart,
         removeFromCart,
         updateQuantity,
         getTotalItems,
         getTotalPrice,
+        isCartOpen,
+        toggleCart,
       }}
     >
       {children}

@@ -254,12 +254,11 @@
 
 
 
-
 "use client";
 
 import { useRouter } from "next/navigation";
-import Navbar from "../../components/Navbar";
-import { useCart } from "../../context/CartContext";
+import Navbar from "../Components/Navbar";
+import { useCart } from "../context/CartContext";
 import { FaTrash, FaPlus, FaMinus, FaArrowLeft, FaShoppingBag } from "react-icons/fa";
 
 export default function CartPage() {
@@ -267,10 +266,7 @@ export default function CartPage() {
   const router = useRouter();
 
   const continueShopping = () => router.push("/store");
-
-  const proceedToCheckout = () => {
-    alert("Proceeding to checkout!");
-  };
+  const proceedToCheckout = () => alert("Proceeding to checkout!");
 
   if (!isLoaded) {
     return (

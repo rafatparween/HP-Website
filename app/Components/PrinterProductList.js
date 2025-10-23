@@ -393,6 +393,8 @@
 
 
 
+
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -504,92 +506,78 @@ const PrinterStore = () => {
   const categories = ['all', 'Home & Office', 'Professional', 'Professional Photo'];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-[#59c7b5] via-[#0095d4] to-[#0077b6]">
       {/* Navigation */}
     
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white via-blue-50 to-cyan-100 bg-clip-text text-transparent">
                     Premium
                   </span>
                   <br />
-                  <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent drop-shadow-lg">
                     Printing Solutions
                   </span>
                 </h1>
-                <p className="text-xl text-slate-300 max-w-2xl">
+                <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
                   Discover the perfect printer for your home, office, or creative studio. 
-                  Expert-curated collection with unbeatable performance.
+                  Expert-curated collection with unbeatable performance and cutting-edge technology.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
                   onClick={() => document.getElementById('products-section').scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
+                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border border-white/30 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/20"
                 >
                   Shop Now
                 </button>
-                <button className="border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300">
+                <button className="bg-transparent border-2 border-white/40 hover:border-white text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/10">
                   View Deals
                 </button>
               </div>
 
-              <div className="grid grid-cols-3 gap-8 pt-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">{products.length}+</div>
-                  <div className="text-sm text-slate-400 mt-1">Premium Models</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">
-                    {Math.max(...products.map(p => p.rating))}/5
-                  </div>
-                  <div className="text-sm text-slate-400 mt-1">Top Rating</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400">24/7</div>
-                  <div className="text-sm text-slate-400 mt-1">Expert Support</div>
-                </div>
-              </div>
+              
             </div>
 
             <div className="relative">
-              <div className="relative z-10 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 shadow-2xl">
-                <div className="bg-slate-700 rounded-xl p-6 aspect-video flex items-center justify-center">
+              <div className="relative z-10 bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
+                <div className="bg-gradient-to-br from-white/20 to-white/10 rounded-2xl p-8 aspect-video flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-6xl mb-4">🖨️</div>
-                    <div className="text-slate-300">Premium Printer Showcase</div>
-                    <div className="text-slate-400 text-sm mt-2">
-                      {filteredProducts.length} products available
+                    <div className="text-6xl mb-4 drop-shadow-2xl">🖨️</div>
+                    <div className="text-white text-xl font-semibold">Premium Printer Showcase</div>
+                    <div className="text-white/70 text-sm mt-2">
+                      {filteredProducts.length} premium products available
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-3xl rounded-full transform scale-150"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-cyan-300/20 blur-3xl rounded-full transform scale-150"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Filters & Controls */}
-      <section className="border-y border-slate-700 bg-slate-800/50 backdrop-blur-sm">
+      <section className="bg-white/10 backdrop-blur-md border-y border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">Category</label>
+              <label className="block text-sm font-medium text-white mb-2">Category</label>
               <select 
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-300"
               >
                 {categories.map(category => (
-                  <option key={category} value={category}>
+                  <option key={category} value={category} className="bg-slate-800">
                     {category === 'all' ? 'All Printers' : category}
                   </option>
                 ))}
@@ -597,27 +585,27 @@ const PrinterStore = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">Price Range</label>
+              <label className="block text-sm font-medium text-white mb-2">Price Range</label>
               <div className="flex items-center space-x-4">
-                <span className="text-slate-400 text-sm">${priceRange[0]}</span>
+                <span className="text-white/80 text-sm">${priceRange[0]}</span>
                 <input 
                   type="range" 
                   min="0" 
                   max="2000" 
                   value={priceRange[1]}
                   onChange={(e) => setPriceRange([0, parseInt(e.target.value)])}
-                  className="flex-1 h-2 bg-slate-600 rounded-lg appearance-none cursor-pointer slider"
+                  className="flex-1 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
                 />
-                <span className="text-slate-400 text-sm">${priceRange[1]}</span>
+                <span className="text-white/80 text-sm">${priceRange[1]}</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">Sort By</label>
+              <label className="block text-sm font-medium text-white mb-2">Sort By</label>
               <select 
                 value={sortBy} 
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-300"
               >
                 <option value="featured">Featured</option>
                 <option value="price-low">Price: Low to High</option>
@@ -628,7 +616,7 @@ const PrinterStore = () => {
             </div>
 
             <div className="flex items-end">
-              <div className="text-slate-300">
+              <div className="text-white backdrop-blur-sm bg-white/10 rounded-xl px-4 py-2 border border-white/20">
                 <span className="font-semibold">{filteredProducts.length}</span> products found
               </div>
             </div>
@@ -640,10 +628,10 @@ const PrinterStore = () => {
       <section id="products-section" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
               Premium Printer Collection
             </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            <p className="text-xl text-white/80 max-w-2xl mx-auto">
               Carefully curated selection of high-performance printers for every need and budget
             </p>
           </div>
@@ -661,10 +649,10 @@ const PrinterStore = () => {
           </div>
 
           {filteredProducts.length === 0 && (
-            <div className="text-center py-12">
+            <div className="text-center py-12 backdrop-blur-sm bg-white/10 rounded-3xl border border-white/20">
               <div className="text-6xl mb-4">😔</div>
               <h3 className="text-2xl font-bold text-white mb-2">No products found</h3>
-              <p className="text-slate-400">Try adjusting your filters to see more products</p>
+              <p className="text-white/70">Try adjusting your filters to see more products</p>
             </div>
           )}
         </div>
@@ -672,30 +660,30 @@ const PrinterStore = () => {
 
       {/* Cart Sidebar */}
       {cart.length > 0 && (
-        <div className="fixed bottom-4 right-4 z-50">
-          <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-2xl max-w-sm">
-            <h3 className="text-white font-semibold mb-3">Your Cart ({cartCount})</h3>
-            <div className="space-y-2 max-h-60 overflow-y-auto mb-3">
+        <div className="fixed bottom-6 right-6 z-50">
+          <div className="bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl p-6 shadow-2xl max-w-sm">
+            <h3 className="text-white font-semibold mb-3 text-lg">Your Cart ({cartCount})</h3>
+            <div className="space-y-3 max-h-60 overflow-y-auto mb-4">
               {cart.map(item => (
-                <div key={item.id} className="flex justify-between items-center text-sm">
-                  <span className="text-slate-300 truncate flex-1 mr-2">{item.name}</span>
+                <div key={item.id} className="flex justify-between items-center text-sm backdrop-blur-sm bg-white/10 rounded-xl p-3">
+                  <span className="text-white truncate flex-1 mr-2 font-medium">{item.name}</span>
                   <div className="flex items-center space-x-2">
                     <button 
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                      className="w-6 h-6 bg-slate-700 rounded flex items-center justify-center text-slate-300 hover:bg-slate-600"
+                      className="w-6 h-6 bg-white/20 rounded flex items-center justify-center text-white hover:bg-white/30 transition-colors"
                     >
                       -
                     </button>
-                    <span className="text-white w-4 text-center">{item.quantity}</span>
+                    <span className="text-white w-4 text-center font-semibold">{item.quantity}</span>
                     <button 
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      className="w-6 h-6 bg-slate-700 rounded flex items-center justify-center text-slate-300 hover:bg-slate-600"
+                      className="w-6 h-6 bg-white/20 rounded flex items-center justify-center text-white hover:bg-white/30 transition-colors"
                     >
                       +
                     </button>
                     <button 
                       onClick={() => removeFromCart(item.id)}
-                      className="text-red-400 hover:text-red-300 ml-2"
+                      className="text-red-300 hover:text-red-200 ml-2 transition-colors"
                     >
                       ×
                     </button>
@@ -703,9 +691,9 @@ const PrinterStore = () => {
                 </div>
               ))}
             </div>
-            <div className="flex justify-between items-center border-t border-slate-700 pt-3">
-              <span className="text-white font-semibold">Total: ${getTotalCartPrice().toFixed(2)}</span>
-              <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm">
+            <div className="flex justify-between items-center border-t border-white/30 pt-4">
+              <span className="text-white font-bold text-lg">Total: ${getTotalCartPrice().toFixed(2)}</span>
+              <button className="bg-white/30 hover:bg-white/40 text-slate-800 font-semibold px-6 py-2 rounded-xl text-sm transition-all duration-300 transform hover:scale-105">
                 Checkout
               </button>
             </div>
@@ -715,9 +703,6 @@ const PrinterStore = () => {
 
       {/* Features Section */}
      
-
-      {/* Footer */}
-  
     </div>
   );
 };
@@ -730,22 +715,22 @@ const ProductCard = ({ product, isWishlisted, onWishlistToggle, onAddToCart }) =
   };
 
   return (
-    <div className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 hover:border-slate-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 overflow-hidden">
+    <div className="group bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 hover:border-white/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden">
       {/* Card Header with Badges */}
       <div className="relative">
         <div className="absolute top-4 left-4 z-10 flex flex-col space-y-2">
           {discountPercentage > 0 && (
-            <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+            <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
               -{discountPercentage}% OFF
             </span>
           )}
           {product.stock < 5 && product.stock > 0 && (
-            <span className="bg-amber-500 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+            <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
               Low Stock
             </span>
           )}
           {product.stock === 0 && (
-            <span className="bg-slate-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+            <span className="bg-gradient-to-r from-slate-600 to-slate-700 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
               Out of Stock
             </span>
           )}
@@ -754,10 +739,10 @@ const ProductCard = ({ product, isWishlisted, onWishlistToggle, onAddToCart }) =
         {/* Wishlist Button */}
         <button
           onClick={() => onWishlistToggle(product.id)}
-          className={`absolute top-4 right-4 z-10 p-2 rounded-full backdrop-blur-sm transition-all duration-300 ${
+          className={`absolute top-4 right-4 z-10 p-3 rounded-full backdrop-blur-sm transition-all duration-300 ${
             isWishlisted 
-              ? 'bg-red-500/20 border border-red-500/50 text-red-400' 
-              : 'bg-slate-700/50 border border-slate-600/50 text-slate-400 hover:bg-red-500/20 hover:border-red-500/50 hover:text-red-400'
+              ? 'bg-red-500/30 border border-red-400/50 text-red-300 shadow-lg' 
+              : 'bg-white/20 border border-white/30 text-white/80 hover:bg-red-500/30 hover:border-red-400/50 hover:text-red-300 hover:shadow-lg'
           }`}
         >
           <svg className="w-5 h-5" fill={isWishlisted ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
@@ -766,7 +751,7 @@ const ProductCard = ({ product, isWishlisted, onWishlistToggle, onAddToCart }) =
         </button>
 
         {/* Product Image */}
-        <div className="aspect-square bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center relative overflow-hidden">
+        <div className="aspect-square bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center relative overflow-hidden">
           {product.image ? (
             <img 
               src={product.image} 
@@ -774,12 +759,12 @@ const ProductCard = ({ product, isWishlisted, onWishlistToggle, onAddToCart }) =
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
           ) : (
-            <div className="text-6xl text-slate-600 group-hover:scale-110 transition-transform duration-500">
+            <div className="text-6xl text-white/40 group-hover:scale-110 transition-transform duration-500">
               🖨️
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-            <button className="bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+            <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 font-semibold">
               Quick View
             </button>
           </div>
@@ -789,38 +774,38 @@ const ProductCard = ({ product, isWishlisted, onWishlistToggle, onAddToCart }) =
       {/* Product Info */}
       <div className="p-6">
         {/* Category & Rating */}
-        <div className="flex justify-between items-start mb-3">
-          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wide">
+        <div className="flex justify-between items-start mb-4">
+          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
             {product.category}
           </span>
-          <div className="flex items-center space-x-1">
-            <div className="flex text-amber-400">
+          <div className="flex items-center space-x-1 bg-white/10 rounded-full px-3 py-1">
+            <div className="flex text-amber-300">
               {'★'.repeat(Math.floor(product.rating))}
               {'☆'.repeat(5 - Math.floor(product.rating))}
             </div>
-            <span className="text-slate-400 text-sm">({product.rating})</span>
+            <span className="text-white/80 text-sm font-semibold">({product.rating})</span>
           </div>
         </div>
 
         {/* Product Name */}
-        <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 leading-tight group-hover:text-blue-300 transition-colors duration-300">
+        <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 leading-tight group-hover:text-cyan-100 transition-colors duration-300">
           {product.name}
         </h3>
 
         {/* Description */}
-        <p className="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">
+        <p className="text-white/70 text-sm mb-4 line-clamp-2 leading-relaxed">
           {product.description}
         </p>
 
         {/* Features */}
         <div className="flex flex-wrap gap-2 mb-4">
           {product.features.slice(0, 2).map((feature, index) => (
-            <span key={index} className="bg-slate-700/50 text-slate-300 px-3 py-1 rounded-full text-xs border border-slate-600">
+            <span key={index} className="bg-white/15 text-white/90 px-3 py-1 rounded-full text-xs border border-white/20">
               {feature}
             </span>
           ))}
           {product.features.length > 2 && (
-            <span className="bg-slate-700/50 text-slate-400 px-3 py-1 rounded-full text-xs border border-slate-600">
+            <span className="bg-white/10 text-white/70 px-3 py-1 rounded-full text-xs border border-white/20">
               +{product.features.length - 2} more
             </span>
           )}
@@ -832,15 +817,15 @@ const ProductCard = ({ product, isWishlisted, onWishlistToggle, onAddToCart }) =
             {product.discountPrice < product.price ? (
               <>
                 <span className="text-2xl font-bold text-white">${product.discountPrice}</span>
-                <span className="text-lg text-slate-400 line-through">${product.price}</span>
+                <span className="text-lg text-white/60 line-through">${product.price}</span>
               </>
             ) : (
               <span className="text-2xl font-bold text-white">${product.price}</span>
             )}
           </div>
-          <div className={`text-sm font-medium ${
-            product.stock > 5 ? 'text-green-400' : 
-            product.stock > 0 ? 'text-amber-400' : 'text-red-400'
+          <div className={`text-sm font-semibold px-3 py-1 rounded-full ${
+            product.stock > 5 ? 'bg-green-500/20 text-green-300 border border-green-400/30' : 
+            product.stock > 0 ? 'bg-amber-500/20 text-amber-300 border border-amber-400/30' : 'bg-red-500/20 text-red-300 border border-red-400/30'
           }`}>
             {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}
           </div>
@@ -852,8 +837,8 @@ const ProductCard = ({ product, isWishlisted, onWishlistToggle, onAddToCart }) =
             onClick={handleAddToCart}
             className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all duration-300 ${
               product.stock === 0 
-                ? 'bg-slate-700 text-slate-400 cursor-not-allowed' 
-                : 'bg-blue-500 hover:bg-blue-600 text-white transform hover:scale-105 shadow-lg shadow-blue-500/25'
+                ? 'bg-white/10 text-white/40 cursor-not-allowed' 
+                : 'bg-white/30 hover:bg-white/40 text-slate-800 transform hover:scale-105 shadow-lg hover:shadow-white/20'
             }`}
             disabled={product.stock === 0}
           >

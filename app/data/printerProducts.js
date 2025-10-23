@@ -31,7 +31,7 @@
         discountPrice: 179.99,
         rating: 4.5,
         stock: 22,
-        image: "/images/printer2.jpg"
+        image: "/hp2.avif"
     },
     {
         id: 3,
@@ -50,108 +50,108 @@
         stock: 8,
         image: "/hp1.avif"
     },
-    // {
-    //     id: 4,
-    //     name: "Brother HL-L8360CDW Digital Color Printer",
-    //     description: "Built for the busy small team. This high-yield color laser printer offers fast printing, robust connectivity, and professional results that command attention.",
-    //     features: [
-    //     "High-Yield Toner Capacity",
-    //     "Print Speed: Up to 33 ppm",
-    //     "Duplex Printing & Scanning",
-    //     "WiFi, Ethernet, USB",
-    //     "250-Sheet Paper Tray"
-    //     ],
-    //     price: 599.99,
-    //     discountPrice: 499.99,
-    //     rating: 4.6,
-    //     stock: 5,
-    //     image: "/images/printer4.jpg"
-    // },
-    // {
-    //     id: 5,
-    //     name: "Canon imagePROGRAF PRO-1000 Professional Inkjet",
-    //     description: "For the artists and photographers who demand perfection. This 17-inch professional printer produces gallery-worthy prints with breathtaking color accuracy.",
-    //     features: [
-    //     "12-Color LUCIA PRO Ink System",
-    //     "17\" Wide Format Printing",
-    //     "Professional Grade Output",
-    //     "Onyx RIP Software Ready",
-    //     "Fine Detail Reproduction"
-    //     ],
-    //     price: 1299.99,
-    //     discountPrice: 1099.99,
-    //     rating: 4.9,
-    //     stock: 3,
-    //     image: "/images/printer5.jpg"
-    // },
-    // {
-    //     id: 6,
-    //     name: "HP OfficeJet Pro 9025e Wireless All-in-One",
-    //     description: "The smart choice for a smarter office. This intelligent printer automatically orders ink, saves you money with HP+, and delivers exceptional quality.",
-    //     features: [
-    //     "HP+ Smart Printing System",
-    //     "Auto Ink Replenishment",
-    //     "Print Speed: Up to 24 ppm",
-    //     "Enhanced Security Features",
-    //     "6-Month Instant Ink Trial"
-    //     ],
-    //     price: 349.99,
-    //     discountPrice: 279.99,
-    //     rating: 4.4,
-    //     stock: 18,
-    //     image: "/images/printer6.jpg"
-    // },
-    // {
-    //     id: 7,
-    //     name: "Epson WorkForce WF-2860 All-in-One Wireless",
-    //     description: "An affordable all-in-one that doesn't compromise. Perfect for home offices and students, offering reliable performance and low-cost printing.",
-    //     features: [
-    //     "Compact All-in-One Design",
-    //     "Individual Ink Cartridges",
-    //     "Wireless Direct Printing",
-    //     "Auto 2-Sided Printing",
-    //     "Easy Setup & Operation"
-    //     ],
-    //     price: 129.99,
-    //     discountPrice: 99.99,
-    //     rating: 4.3,
-    //     stock: 30,
-    //     image: "/images/printer7.jpg"
-    // },
-    // {
-    //     id: 8,
-    //     name: "Brother MFC-J4335DW Wireless All-in-One",
-    //     description: "A versatile workhorse for the connected office. Print, scan, copy, and fax with high-yield ink tanks that keep your running costs incredibly low.",
-    //     features: [
-    //     "High-Yield Ink Bottle System",
-    //     "11\" x 17\" Large Format Scanning",
-    //     "Automatic Document Feeder",
-    //     "Wireless & Mobile Printing",
-    //     "1-Year Ink Supply Included"
-    //     ],
-    //     price: 299.99,
-    //     discountPrice: 249.99,
-    //     rating: 4.5,
-    //     stock: 12,
-    //     image: "/images/printer8.jpg"
-    // },
-    // {
-    //     id: 9,
-    //     name: "HP Neverstop Laser 1001nw Wireless Printer",
-    //     description: "The laser printer reimagined. No more toner cartridges! Just add HP's unique toner powder and enjoy up to 5,000 pages from a single purchase.",
-    //     features: [
-    //     "Tank-Based Laser System",
-    //     "Up to 5,000 Pages per Refill",
-    //     "Wireless Connectivity",
-    //     "Fast Monochrome Printing",
-    //     "Eco-Friendly Design"
-    //     ],
-    //     price: 399.99,
-    //     discountPrice: 349.99,
-    //     rating: 4.2,
-    //     stock: 7,
-    //     image: "/images/printer9.jpg"
-    // },
+    {
+        id: 4,
+        name: "Brother HL-L8360CDW Digital Color Printer",
+        description: "Built for the busy small team. This high-yield color laser printer offers fast printing, robust connectivity, and professional results that command attention.",
+        features: [
+        "High-Yield Toner Capacity",
+        "Print Speed: Up to 33 ppm",
+        "Duplex Printing & Scanning",
+        "WiFi, Ethernet, USB",
+        "250-Sheet Paper Tray"
+        ],
+        price: 599.99,
+        discountPrice: 499.99,
+        rating: 4.6,
+        stock: 5,
+        image: "/br1.avif"
+    },
+    {
+        id: 5,
+        name: "Canon imagePROGRAF PRO-1000 Professional Inkjet",
+        description: "For the artists and photographers who demand perfection. This 17-inch professional printer produces gallery-worthy prints with breathtaking color accuracy.",
+        features: [
+        "12-Color LUCIA PRO Ink System",
+        "17\" Wide Format Printing",
+        "Professional Grade Output",
+        "Onyx RIP Software Ready",
+        "Fine Detail Reproduction"
+        ],
+        price: 1299.99,
+        discountPrice: 1099.99,
+        rating: 4.9,
+        stock: 3,
+        image: "/cn2.avif"
+    },
+    {
+        id: 6,
+        name: "HP OfficeJet Pro 9025e Wireless All-in-One",
+        description: "The smart choice for a smarter office. This intelligent printer automatically orders ink, saves you money with HP+, and delivers exceptional quality.",
+        features: [
+        "HP+ Smart Printing System",
+        "Auto Ink Replenishment",
+        "Print Speed: Up to 24 ppm",
+        "Enhanced Security Features",
+        "6-Month Instant Ink Trial"
+        ],
+        price: 349.99,
+        discountPrice: 279.99,
+        rating: 4.4,
+        stock: 18,
+        image: "/hp1.avif"
+    },
+    {
+        id: 7,
+        name: "Epson WorkForce WF-2860 All-in-One Wireless",
+        description: "An affordable all-in-one that doesn't compromise. Perfect for home offices and students, offering reliable performance and low-cost printing.",
+        features: [
+        "Compact All-in-One Design",
+        "Individual Ink Cartridges",
+        "Wireless Direct Printing",
+        "Auto 2-Sided Printing",
+        "Easy Setup & Operation"
+        ],
+        price: 129.99,
+        discountPrice: 99.99,
+        rating: 4.3,
+        stock: 30,
+        image: "/ep3.avif"
+    },
+    {
+        id: 8,
+        name: "Brother MFC-J4335DW Wireless All-in-One",
+        description: "A versatile workhorse for the connected office. Print, scan, copy, and fax with high-yield ink tanks that keep your running costs incredibly low.",
+        features: [
+        "High-Yield Ink Bottle System",
+        "11\" x 17\" Large Format Scanning",
+        "Automatic Document Feeder",
+        "Wireless & Mobile Printing",
+        "1-Year Ink Supply Included"
+        ],
+        price: 299.99,
+        discountPrice: 249.99,
+        rating: 4.5,
+        stock: 12,
+        image: "/br3.avif"
+    },
+    {
+        id: 9,
+        name: "HP Neverstop Laser 1001nw Wireless Printer",
+        description: "The laser printer reimagined. No more toner cartridges! Just add HP's unique toner powder and enjoy up to 5,000 pages from a single purchase.",
+        features: [
+        "Tank-Based Laser System",
+        "Up to 5,000 Pages per Refill",
+        "Wireless Connectivity",
+        "Fast Monochrome Printing",
+        "Eco-Friendly Design"
+        ],
+        price: 399.99,
+        discountPrice: 349.99,
+        rating: 4.2,
+        stock: 7,
+        image: "/hp3.avif"
+    },
     // {
     //     id: 10,
     //     name: "Canon SELPHY CP1300 Wireless Compact Photo Printer",
