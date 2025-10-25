@@ -399,6 +399,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { printerProducts } from '../data/printerProducts';
+import { useCart } from '../context/CartContext';
 
 const PrinterStore = () => {
   const [products] = useState(printerProducts);
@@ -409,6 +410,7 @@ const PrinterStore = () => {
   const [wishlist, setWishlist] = useState(new Set());
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
+  const {addToCart} = useCart();
 
   // Filter products based on category and price
   useEffect(() => {
@@ -462,25 +464,25 @@ const PrinterStore = () => {
     setWishlist(newWishlist);
   };
 
-  const addToCart = (product) => {
-    if (product.stock === 0) return;
+  // const addToCart = (product) => {
+  //   if (product.stock === 0) return;
     
-    setCart(prevCart => {
-      const existingItem = prevCart.find(item => item.id === product.id);
+  //   setCart(prevCart => {
+  //     const existingItem = prevCart.find(item => item.id === product.id);
       
-      if (existingItem) {
-        // Increase quantity if item already in cart
-        return prevCart.map(item =>
-          item.id === product.id 
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      } else {
-        // Add new item to cart
-        return [...prevCart, { ...product, quantity: 1 }];
-      }
-    });
-  };
+  //     if (existingItem) {
+  //       // Increase quantity if item already in cart
+  //       return prevCart.map(item =>
+  //         item.id === product.id 
+  //           ? { ...item, quantity: item.quantity + 1 }
+  //           : item
+  //       );
+  //     } else {
+  //       // Add new item to cart
+  //       return [...prevCart, { ...product, quantity: 1 }];
+  //     }
+  //   });
+  // };
 
   const removeFromCart = (productId) => {
     setCart(prevCart => prevCart.filter(item => item.id !== productId));
@@ -834,7 +836,7 @@ const ProductCard = ({ product, isWishlisted, onWishlistToggle, onAddToCart }) =
         {/* Action Buttons */}
         <div className="flex space-x-3">
           <button 
-            onClick={handleAddToCart}
+            onClick={() =>  onAddToCart(product)}
             className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all duration-300 ${
               product.stock === 0 
                 ? 'bg-white/10 text-white/40 cursor-not-allowed' 

@@ -105,12 +105,18 @@ import Image from "next/image";
 import { FaSearch, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { useCart } from "../context/CartContext";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { cart, getTotalItems, isCartOpen, toggleCart } = useCart();
+  const {  getTotalItems, isCartOpen, toggleCart } = useCart();
+  // const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cart = typeof window !== "undefined"
+  ? JSON.parse(localStorage.getItem("cart")) || []
+  : [];
+  
   const router = useRouter();
-
+ console.log("🛒 Current cart items in Navbar:", cart);
   return (
     <nav className="w-full bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-[1360px] mx-auto px-4 py-4 flex items-center justify-between">
@@ -118,9 +124,9 @@ export default function Navbar() {
         <div className="flex items-center space-x-8">
           <Image src="/OIP.jpg" alt="HP Logo" width={80} height={80} className="hover:scale-105 transition-transform"/>
           <div className="hidden md:flex space-x-12 text-[#767676] font-semibold text-base text-[20px]">
-            <a href="/" className="hover:text-black transition-colors duration-200">Explore</a>
-            <a href="/" className="hover:text-black transition-colors duration-200">Shop</a>
-            <a href="/" className="hover:text-black transition-colors duration-200">Support</a>
+            <Link href="/" className="hover:text-black transition-colors duration-200">Explore</Link>
+            <Link href="/" className="hover:text-black transition-colors duration-200">Shop</Link>
+            <Link href="/" className="hover:text-black transition-colors duration-200">Support</Link>
           </div>
         </div>
 
@@ -132,6 +138,7 @@ export default function Navbar() {
           </div>
 
           {/* Cart */}
+          <Link href="/cart">
           <div className="relative cursor-pointer" onClick={toggleCart}>
             <FaShoppingCart className="text-gray-700 text-xl"/>
             {getTotalItems() > 0 && (
@@ -140,10 +147,16 @@ export default function Navbar() {
               </span>
             )}
           </div>
+          </Link>
 
-          <button className="hover:scale-105 px-8 py-2 font-semibold rounded-full transition-colors duration-200 shadow-md text-white" style={{background: 'linear-gradient(to right, #59c7b5, #0095d4)'}}>
-            Sign in
-          </button>
+          <Link href="/SignIn">
+  <button
+    className="hover:scale-105 px-8 py-2 font-semibold rounded-full transition-colors duration-200 shadow-md text-white"
+    style={{ background: "linear-gradient(to right, #59c7b5, #0095d4)" }}
+  >
+    Sign in
+  </button>
+</Link>
         </div>
 
         {/* Mobile */}
@@ -164,3 +177,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

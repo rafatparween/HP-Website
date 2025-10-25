@@ -12,6 +12,7 @@ import {
   Update,
   ThumbUp
 } from '@mui/icons-material';
+import { Link } from 'lucide-react';
 
 const Disclaimer = () => {
   return (
@@ -44,7 +45,7 @@ const Disclaimer = () => {
               </h3>
               <nav className="space-y-3">
                 {disclaimerContent.map((section, index) => (
-                  <a 
+                  <Link
                     key={index}
                     href={`#section-${index}`}
                     className="block text-gray-600 hover:text-[#0095d4] font-medium py-2 px-4 rounded-xl hover:bg-[#59c7b5]/10 transition-all duration-300 group"
@@ -53,7 +54,7 @@ const Disclaimer = () => {
                       <div className="w-2 h-2 bg-[#59c7b5] rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
                       {section.sectionTitle}
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>

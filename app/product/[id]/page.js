@@ -4,8 +4,8 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useCart } from "../../../context/CartContext";
-import { printerProducts } from "../../../data/printerProducts"; // your data file
+import { useCart } from "@/app/context/CartContext";
+import { printerProducts } from "@/app/data/printerProducts";
 
 export default function ProductDetail() {
   const params = useParams();

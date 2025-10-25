@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Head from 'next/head'; // Needed for meta tags
 import { 
@@ -56,7 +57,7 @@ const TermsAndConditions = () => {
                 </h3>
                 <nav className="space-y-2">
                   {termsAndConditionsContent.map((section, index) => (
-                    <a 
+                    <Link
                       key={index}
                       href={`#section-${index}`}
                       className="block text-gray-600 hover:text-[#0095d4] font-medium py-3 px-4 rounded-xl hover:bg-[#59c7b5]/10 transition-all duration-300 group"
@@ -65,7 +66,7 @@ const TermsAndConditions = () => {
                         <div className="w-2 h-2 bg-[#59c7b5] rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
                         <span className="text-sm leading-tight">{section.sectionTitle}</span>
                       </div>
-                    </a>
+                    </Link>
                   ))}
                 </nav>
                 
