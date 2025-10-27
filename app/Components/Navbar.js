@@ -122,7 +122,7 @@ export default function Navbar() {
       <div className="max-w-[1360px] mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo + Nav */}
         <div className="flex items-center space-x-8">
-          <Image src="/OIP.jpg" alt="HP Logo" width={80} height={80} className="hover:scale-105 transition-transform"/>
+          <Image src="/epslogo.png" alt="HP Logo" width={150} height={150} className="hover:scale-105 transition-transform"/>
           <div className="hidden md:flex space-x-12 text-[#767676] font-semibold text-base text-[20px]">
             <Link href="/" className="hover:text-black transition-colors duration-200">Explore</Link>
             <Link href="/" className="hover:text-black transition-colors duration-200">Shop</Link>
@@ -133,12 +133,12 @@ export default function Navbar() {
         {/* Right */}
         <div className="hidden lg:flex items-center space-x-6">
           <div className="flex items-center w-80 border-2 border-gray-200 rounded-full px-4 py-2 hover:border-blue-500 transition-colors duration-200">
-            <input type="text" placeholder="Search HP Support" className="w-full outline-none text-gray-700 bg-transparent text-sm"/>
+            <input type="text" placeholder="Search Printer Support" className="w-full outline-none text-gray-700 bg-transparent text-sm"/>
             <FaSearch className="text-gray-500 ml-2"/>
           </div>
 
           {/* Cart */}
-          <Link href="/cart">
+          {/* <Link href="/cart">
           <div className="relative cursor-pointer" onClick={toggleCart}>
             <FaShoppingCart className="text-gray-700 text-xl"/>
             {getTotalItems() > 0 && (
@@ -147,7 +147,8 @@ export default function Navbar() {
               </span>
             )}
           </div>
-          </Link>
+          </Link> */}
+          
 
           <Link href="/SignIn">
   <button
