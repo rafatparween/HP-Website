@@ -8,13 +8,15 @@ const SuppoertSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
-  const messages = [
-    "🚀 Professional Printer & IT Support Nationwide",
-    "💻 1000+ Happy Customers | 2+ Years Experience", 
-    "🔧 Remote & Onsite Solutions | 50 States Coverage",
-    "⚡ Fast Response | Expert Technicians | Guaranteed Service",
-    "🛡️ Your Trusted Technology Partner Since 2022"
-  ];
+ const messages = [
+  "Welcome to EZ Tech Printer Solutions LLC, a registered U.S. technology-services company providing printer, computer, and IT device support nationwide.",
+  "For over two years, we’ve delivered professional remote and onsite solutions, serving over a thousand happy customers across the United States.",
+  "🚀 Professional Printer & IT Support Nationwide",
+  "💻 1000+ Happy Customers | 2+ Years Experience", 
+  "🔧 Remote & Onsite Solutions | 50 States Coverage",
+  "⚡ Fast Response | Expert Technicians | Guaranteed Service",
+  "🛡️ Your Trusted Technology Partner Since 2022"
+];
 
   useEffect(() => {
     const currentMessage = messages[currentIndex];
