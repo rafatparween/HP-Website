@@ -144,7 +144,7 @@ const PrivacyPolicy = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="mt-12 bg-gradient-to-r from-[#59c7b5] to-[#0095d4] rounded-3xl p-12 text-white shadow-2xl">
+            <div className="mt-12 rounded-3xl p-12 text-white shadow-2xl">
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="flex-1">
                   <ContactSupport className="text-6xl mb-6 opacity-90" />

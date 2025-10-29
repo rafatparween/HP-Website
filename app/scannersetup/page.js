@@ -122,7 +122,7 @@ export default function ScannerSetupGuide() {
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 text-center px-6"
+        className=" text-white py-20 text-center px-6" style={{ background: 'linear-gradient(135deg, #59c7b5 0%, #0095d4 100%)' }}
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Effortless Scanner Setup
@@ -149,11 +149,16 @@ export default function ScannerSetupGuide() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`py-6 font-semibold transition-all ${
-                  activeTab === tab
-                    ? "bg-gradient-to-r from-blue-600 to-indigo-700 text-white"
-                    : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200"
-                }`}
+                className={`${
+  activeTab === tab
+    ? "text-white"
+    : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200"
+}`}
+style={
+  activeTab === tab
+    ? { background: "linear-gradient(135deg, #59c7b5 0%, #0095d4 100%)" }
+    : {}
+}
               >
                 {tab === "windows" && "🪟 Windows"}
                 {tab === "mac" && "🍎 Mac OS"}
@@ -226,7 +231,7 @@ export default function ScannerSetupGuide() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-10 text-center text-white shadow-xl"
+          className="mt-16 rounded-2xl p-10 text-center text-white shadow-xl" style={{ background: 'linear-gradient(135deg, #59c7b5 0%, #0095d4 100%)' }}
         >
           <h2 className="text-2xl font-bold mb-3">
             Need Help from EzTech-Printer-Solutions Experts?

@@ -303,7 +303,7 @@ export default function BusinessPrinterSupport() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-center text-white mb-16">
+        <div className=" rounded-2xl p-8 text-center text-white mb-16" style={{ background: "linear-gradient(to right, #59c7b5, #0095d4)" }}>
           <h2 className="text-3xl font-bold mb-4 flex items-center justify-center">
             <FaHeadset className="mr-3" />
             Still Need Business Printing Assistance?
