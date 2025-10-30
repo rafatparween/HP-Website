@@ -146,7 +146,7 @@ export default function Footer() {
             <li><Link href="/" className="hover:underline">Home</Link></li>
               <li><Link href="/about" className="hover:underline">About Us</Link></li>
               <li><Link href="/pages/service" className="hover:underline">Service</Link></li>
-              <li><Link href="/Contact" className="hover:underline">contact</Link></li>
+              <li><Link href="/Contact" className="hover:underline">Contact</Link></li>
               <li><Link href="/Disclaimer" className="hover:underline">Disclaimer</Link></li>
               <li><Link href="/privacypolicy" className="hover:underline">Privacy Policy</Link></li>
               <li><Link href="/terms-conditions" className="hover:underline">Terms and Conditions</Link></li>
@@ -154,7 +154,7 @@ export default function Footer() {
           </div>
 
           {/* Ways to buy */}
-          <div className="min-w-[210px] flex-1 mb-6">
+          {/* <div className="min-w-[210px] flex-1 mb-6">
             <div className="text-[18px] mb-2 font-normal">Ways to buy</div>
             <ul className="space-y-2 text-white/[0.92]">
               <li><Link href="/" className="hover:underline">Shop online</Link></li>
@@ -164,7 +164,7 @@ export default function Footer() {
              
               <li><Link href="/cart" className="hover:underline">Cart</Link></li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Support */}
           <div className="min-w-[270px] flex-1 mb-6">
