@@ -202,121 +202,112 @@
 
 "use client";
 import { useState } from "react";
-import {
-  Power,
-  Wifi,
-  Printer,
-  Droplets,
-  Settings,
-  Wrench,
-  Download,
-  Monitor,
-  Factory,
-  Heart,
-  Headphones,
-  RotateCcw,
-  Zap,
-  Shield,
-  CheckCircle,
-  AlertTriangle,
-  Clock,
-  Users,
-  Star,
-} from "lucide-react";
+import Head from "next/head";
 
-const PrinterDiagnosticsGuide = () => {
+export default function PrinterDiagnosticsGuide() {
+  const [expandedFaq, setExpandedFaq] = useState(null);
+
+  const toggleFaq = (index) => setExpandedFaq(expandedFaq === index ? null : index);
+
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-white min-h-screen py-12 px-6">
-      <div className="max-w-5xl mx-auto">
-        {/* Main Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-blue-700 mb-4">
-            Complete Printer Diagnostics & Repair
-          </h1>
-          <p className="text-gray-600 text-lg">
-            Our diagnostic checks identify and fix hidden issues in your printer's hardware, drivers, and settings.
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12">
+      <Head>
+        <title>Printer Diagnostics | EzTech-Printer-Solutions</title>
+      </Head>
 
-        {/* Separator */}
-        <div className="border-t border-gray-300 my-8"></div>
-
-        {/* Diagnostic Areas Section */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
-            <CheckCircle className="w-6 h-6 text-green-500" />
-            Diagnostic Areas
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700">Printing errors</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700">Slow printing</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700">Paper jams</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700">Network issues</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700">Software issues</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700">Toner/ink problems</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700">Overheating</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700">Privacy/security settings</span>
-            </div>
+      {/* Header */}
+      <div className="text-center mb-16">
+        <div className="flex justify-center mb-6">
+          <div className="w-20 h-20 bg-gradient-to-br from-[#59c7b5] to-[#0095d4] rounded-2xl shadow-xl flex items-center justify-center text-white text-4xl font-bold">
+            🔧
           </div>
         </div>
+        <h1 className="text-5xl font-bold text-gray-800 mb-4">
+          Complete Printer Diagnostics & Repair
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Our diagnostic checks identify and fix hidden issues in your printer's hardware, drivers, and settings.
+        </p>
+      </div>
 
-        {/* Separator */}
-        <div className="border-t border-gray-300 my-8"></div>
-
-        {/* Business Support Section */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-            <CheckCircle className="w-6 h-6 text-green-500" />
-            BUSINESS SUPPORT PAGE — FULL PRO CONTENT
-          </h2>
-          <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
-            <h3 className="text-xl font-bold text-blue-700 mb-3">
-              Professional Printer Support for Businesses
-            </h3>
-            <p className="text-gray-600 text-lg">
-              Small business or enterprise — we provide fast, reliable, and scalable printing support.
-            </p>
+      {/* Diagnostic Areas Section */}
+      <div className="max-w-6xl mx-auto bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-10 border border-blue-100 mb-16">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10 flex items-center justify-center gap-3">
+          <span className="text-green-500">✅</span>
+          Diagnostic Areas
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Printing errors</h3>
+            </div>
           </div>
-        </div>
 
-        {/* Support Contact Section */}
-        <div className="text-center mt-16">
-          <div className="flex justify-center items-center gap-3 text-blue-700 mb-3">
-            <Headphones className="w-6 h-6" />
-            <p className="font-semibold text-lg">
-              Need more help? Contact our support team.
-            </p>
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Slow printing</h3>
+            </div>
           </div>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-md">
-            Start Live Chat
-          </button>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Paper jams</h3>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Network issues</h3>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Software issues</h3>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Toner/ink problems</h3>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Overheating</h3>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Privacy/security settings</h3>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* CTA Section */}
+      <div className="text-center mt-20">
+        <h3 className="text-2xl font-bold text-gray-800 mb-4">
+          Need Professional Printer Diagnostics?
+        </h3>
+        <button className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 shadow-lg transition-transform duration-300">
+          Contact Our Support Team
+        </button>
+      </div>
+
+      {/* Footer */}
+     
     </div>
   );
-};
-
-export default PrinterDiagnosticsGuide;
+}

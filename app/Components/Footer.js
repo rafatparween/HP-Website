@@ -150,6 +150,7 @@ export default function Footer() {
               <li><Link href="/Disclaimer" className="hover:underline">Disclaimer</Link></li>
               <li><Link href="/privacypolicy" className="hover:underline">Privacy Policy</Link></li>
               <li><Link href="/terms-conditions" className="hover:underline">Terms and Conditions</Link></li>
+              <li><Link href="/refund-and-cancellation" className="hover:underline">Refund, Return & Cancellation Policy</Link></li>
             </ul>
           </div>
 
@@ -175,7 +176,7 @@ export default function Footer() {
               <li><Link href="/scannersetup" className="hover:underline">Scanner Setup</Link></li>
               <li><Link href="/supporthome" className="hover:underline">Support Home</Link></li>
               <li><Link href="/inkissue" className="hover:underline">Ink Cartridges Issue</Link></li>
-              <li><Link href="/businesssupport" className="hover:underline">Diagnostics</Link></li>
+              <li><Link href="/diagnostics" className="hover:underline">Diagnostics</Link></li>
             </ul>
           </div>
 

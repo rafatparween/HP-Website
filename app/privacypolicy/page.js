@@ -572,7 +572,7 @@ const PrivacyPolicy = () => {
                       </div>
                       <div className="flex items-center">
                         <Phone className="mr-3 text-[#59c7b5]" />
-                        <span>[Your Toll-Free Number]</span>
+                        <span>[Your Toll-Free Number:- 808-468-1018]</span>
                       </div>
                       <div className="flex items-center">
                         <Business className="mr-3 text-[#59c7b5]" />
@@ -799,7 +799,7 @@ const privacyPolicyContent = [
       'If you have any questions or requests regarding this Privacy Policy, contact:',
       '',
       '📧 support@eztechprintersolutions.com',
-      '📞 [Your Toll-Free Number]',
+      '📞 [Your Toll-Free Number:-808-468-1018]',
       '🏢 EZ Tech Printer Solutions LLC – United States',
     ],
   },
