@@ -200,11 +200,7 @@ const PrinterSetup = () => {
       </div>
 
       {/* Footer */}
-      <footer className="mt-20 py-8 text-center text-gray-600">
-        <p>
-          © {new Date().getFullYear()} <b>EzTech-Printer-Solutions</b>. All Rights Reserved.
-        </p>
-      </footer>
+     
     </div>
   );
 };
