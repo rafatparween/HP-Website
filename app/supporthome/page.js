@@ -189,9 +189,7 @@ export default function SupportHome() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 text-center py-8 mt-16">
-        <p>© {new Date().getFullYear()} EzTech-Printer-Solutions. All rights reserved.</p>
-      </footer>
+      
     </div>
   );
 }
