@@ -114,12 +114,12 @@ export default function PrinterSetupSection() {
               <div className="space-y-4 mb-12">
                 <div className="flex items-center space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#59c7b5]/30 transition-all duration-300 group">
                   <div className="w-2 h-2 bg-[#59c7b5] rounded-full animate-pulse"></div>
-                  <span className="text-lg font-medium text-gray-800 group-hover:text-gray-900">Can't connect to HP wireless printer</span>
+                  <span className="text-lg font-medium text-gray-800 group-hover:text-gray-900">Can't connect to wireless printer</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#59c7b5]/30 transition-all duration-300 group">
                   <div className="w-2 h-2 bg-[#0095d4] rounded-full animate-pulse"></div>
-                  <span className="text-lg font-medium text-gray-800 group-hover:text-gray-900">Can't find HP wireless printer on network</span>
+                  <span className="text-lg font-medium text-gray-800 group-hover:text-gray-900">Can't find wireless printer on network</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#59c7b5]/30 transition-all duration-300 group">
@@ -129,7 +129,7 @@ export default function PrinterSetupSection() {
                 
                 <div className="flex items-center space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#59c7b5]/30 transition-all duration-300 group">
                   <div className="w-2 h-2 bg-[#0095d4] rounded-full animate-pulse"></div>
-                  <span className="text-lg font-medium text-gray-800 group-hover:text-gray-900">Error printing from HP wireless printer</span>
+                  <span className="text-lg font-medium text-gray-800 group-hover:text-gray-900">Error printing from wireless printer</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#59c7b5]/30 transition-all duration-300 group">

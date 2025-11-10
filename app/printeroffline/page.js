@@ -998,7 +998,7 @@ export default function PrinterTroubleshooting() {
                           value={formData.printerModel}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0095d4] focus:border-[#0095d4] transition-all duration-200"
-                          placeholder="e.g., HP LaserJet Pro"
+                          placeholder="e.g.,  LaserJet Pro"
                         />
                       </div>
                     </div>
