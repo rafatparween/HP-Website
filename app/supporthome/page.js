@@ -99,7 +99,7 @@ export default function SupportHome() {
           </div>
           <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
             <h3 className="text-3xl font-bold text-indigo-600"></h3>
-            <p className="text-gray-600">Support Availability</p>
+            <p className="text-gray-600"> Available Support</p>
           </div>
           <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
             <h3 className="text-3xl font-bold text-purple-600">1.2M+</h3>

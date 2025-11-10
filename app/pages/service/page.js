@@ -310,7 +310,7 @@ const Services = () => {
                         </div>
                         <div>
                           <p className="font-bold text-gray-800 text-xl">Call Us</p>
-                          <p className="text-gray-600">808-468-1018</p>
+                          <p className="text-gray-600">888-254-8896</p>
                         </div>
                       </div>
                     </div>

@@ -81,7 +81,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg">Call Us</h3>
-                      <p className="text-white/80">808-468-1018</p>
+                      <p className="text-white/80">888-254-8896</p>
                     </div>
                   </div>
 
@@ -91,7 +91,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg">Email Us</h3>
-                      <p className="text-white/80">support@example.com</p>
+                      <p className="text-white/80">support@eztechprintersolutions.com</p>
                     </div>
                   </div>
 
@@ -115,7 +115,7 @@ const Contact = () => {
                   <div className="space-y-3">
                     <div className="flex items-center">
                       <CheckCircle className="text-white/90 mr-2 text-sm" />
-                      <span className="text-white/90 text-sm">24/7 Customer Support</span>
+                      <span className="text-white/90 text-sm"> Customer Support</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="text-white/90 mr-2 text-sm" />
@@ -257,7 +257,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Call Us Directly</h3>
               <p className="text-gray-600 mb-4">Speak with our support team immediately</p>
-              <p className="text-2xl font-bold text-[#0095d4]">808-468-1018</p>
+              <p className="text-2xl font-bold text-[#0095d4]">888-254-8896</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
@@ -266,7 +266,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Email Support</h3>
               <p className="text-gray-600 mb-4">Send us an email for detailed inquiries</p>
-              <p className="text-lg font-bold text-[#59c7b5]">support@example.com</p>
+              <p className="text-lg font-bold text-[#59c7b5]">support@eztechprintersolutions.com</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">

@@ -230,7 +230,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">Hours</div>
-                      <div className="text-gray-600">24/7 Remote Assistance</div>
+                      <div className="text-gray-600">Remote Assistance</div>
                     </div>
                   </div>
                 </div>
