@@ -195,8 +195,8 @@ export default function PrinterSetupSection() {
                 </h2>
                 <h3 className="text-3xl font-semibold text-gray-800 mb-4">
                   Contact Support – <span className="text-[#0095d4]">Chat Live</span> 
-                  <span className="text-2xl font-bold ml-4 bg-gradient-to-r from-[#59c7b5] to-[#0095d4] bg-clip-text text-transparent">
-                    or Call Us: (844) 491-5152
+                  <span className="text-3xl font-bold ml-4 bg-gradient-to-r from-[#59c7b5] to-[#0095d4] bg-clip-text text-transparent">
+                    or Call Us
                   </span>
                 </h3>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -228,7 +228,7 @@ export default function PrinterSetupSection() {
                 </div>
                 <div className="text-center mt-6 pt-4 border-t border-gray-200">
                   <p className="text-[24px] font-bold bg-gradient-to-r from-[#59c7b5] to-[#0095d4] bg-clip-text text-transparent">
-                    Call Us For Printer Free Support:- (844) 491-5152
+                   Call Us For Printer Support:- +1 (844) 491-5152
                   </p>
                 </div>
               </div>
