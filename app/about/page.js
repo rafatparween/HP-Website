@@ -210,7 +210,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">Phone</div>
-                      <div className="text-gray-600">[888-254-8896]</div>
+                      <div className="text-gray-600">[(844) 491-5152]</div>
                     </div>
                   </div>
 

@@ -779,7 +779,7 @@ export default function PrinterTroubleshooting() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <div className="flex items-center gap-2 text-lg font-semibold text-gray-800">
                       <Phone className="w-5 h-5 text-[#0095d4]" />
-                      📞 Toll-Free: (888) 254-8896
+                      📞 Toll-Free: (844) 491-5152
                     </div>
                     <div className="flex items-center gap-2 text-lg font-semibold text-gray-800">
                       <MessageCircle className="w-5 h-5 text-[#59c7b5]" />
@@ -1061,7 +1061,7 @@ export default function PrinterTroubleshooting() {
                         <h4 className="font-semibold text-amber-800 mb-1">Immediate Assistance Available</h4>
                         <p className="text-amber-700 text-sm">
                           For urgent printer issues, call our support line at{' '}
-                          <span className="font-bold">(888) 254-8896</span>
+                          <span className="font-bold">(844) 491-5152</span>
                         </p>
                       </div>
                     </div>
@@ -1122,7 +1122,7 @@ export default function PrinterTroubleshooting() {
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#0095d4] font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
               >
                 <Phone className="w-5 h-5" />
-                Call: (888) 254-8896
+                Call: (844) 491-5152
               </a>
             </div>
           </div>
